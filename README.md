@@ -12,7 +12,7 @@
 
 ### `Data Layer and Context API`
 
-<img src="./temp_image/datalayer_1.JPG">
+<img src="./src/temp_image/datalayer_1.JPG" width ="70%"></br>
 keep parsing your props.</br>
 header로 가고싶으면, 스포티파이에서 바로 app으로 갈수는 없음.</br>
 
@@ -23,7 +23,7 @@ Thightly coupled code</br>
 어떤 area에서 change가 발생하면 다른 other areas of code base를 break하면 안되는데,</br>
 코드에 prop drilling이 많이 involved되면 change할 때마다 유리위를 밟는것과 같다 보면 됨.</br>
 </br></br>
-<img src="./temp_image/datalayer_2.JPG">
+<img src="./src/temp_image/datalayer_2.JPG" width ="70%"></br>
 이러한 문제점을 fix하기 위해 많은 사람들이 **react context api**를 사용함.</br>
 </br></br>
 react context api를 사용하면, any point of tree던 directly하게 pull it 할 수 있음.</br>
