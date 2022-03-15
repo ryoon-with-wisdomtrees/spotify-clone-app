@@ -3,7 +3,7 @@ import "./App.css";
 import Login from "./Login";
 import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
-
+import Player from "./Player";
 const spotify = new SpotifyWebApi();
 //백앤 프론트 커뮤니케이션 가능하게 인스턴스만들어 놈.
 
@@ -23,16 +23,14 @@ function App() {
       setToken(_token); //메모리에 토근 적재
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
-        console.log("💥", user); // 사용자정보 들고온거 뿌려서 확인해보장
+        console.log("user💥", user); // 사용자정보 들고온거 뿌려서 확인해보장
       }); // 스포티파이와 리액트가 연결되게 하는 작업 중 하나.
     }
 
     console.log(" token 💚", token);
   });
 
-  return (
-    <div className="app">{token ? <h1> 로그인 성공 </h1> : <Login />}</div>
-  );
+  return <div className="app">{token ? <Player /> : <Login />}</div>; // 로그인성공하면 플레이어 페이지로
 }
 
 export default App;

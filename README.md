@@ -4,17 +4,38 @@
 
 ## Check 💥
 
-새로이 알게된 포인트들을 여기에 업데이트 해 나갈 예정
+새로이 알게된 포인트들을 여기에 업데이트 해 나갈 예정.
 
 ### `npm i spotify-web-api-js`
 
-스포티파이와 리액트가 상호 커뮤니케이션 가능하게하는 api
+스포티파이와 리액트가 상호 커뮤니케이션 가능하게하는 api.
 
-<!-- Runs the app in the development mode.\
+### `Data Layer and Context API`
+
+<img src="./temp_image/datalayer_1.JPG">
+keep parsing your props.</br>
+header로 가고싶으면, 스포티파이에서 바로 app으로 갈수는 없음.</br>
+
+app->player->header 이런식으로 가야함.</br>
+이거를 **prop drilling**이라고 함.</br>
+</br></br>
+Thightly coupled code</br>
+어떤 area에서 change가 발생하면 다른 other areas of code base를 break하면 안되는데,</br>
+코드에 prop drilling이 많이 involved되면 change할 때마다 유리위를 밟는것과 같다 보면 됨.</br>
+</br></br>
+<img src="./temp_image/datalayer_2.JPG">
+이러한 문제점을 fix하기 위해 많은 사람들이 **react context api**를 사용함.</br>
+</br></br>
+react context api를 사용하면, any point of tree던 directly하게 pull it 할 수 있음.</br>
+extremely crucial한 부분이니까 context api 자세히 잘 들여다 볼 것.(amazone클론 보면 이 부분 좀더 자세히 알 수 있음)
+
+<!--
+Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
 
 ### `npm test`
 
