@@ -1,6 +1,6 @@
 import React from "react";
 import "./Login.css";
-import { loginUrl } from "./spotify";
+import { accessUrl } from "./spotify";
 
 //rfce
 
@@ -14,7 +14,7 @@ function Login() {
       />
 
       {/** Login with spotify button */}
-      <a href="{loginUrl}">Login with Spotify</a>
+      <a href="{accessUrl }">Login with Spotify</a>
     </div>
   );
 }

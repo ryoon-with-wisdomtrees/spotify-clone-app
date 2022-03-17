@@ -1,0 +1,29 @@
+.siebarOption {
+  display: flex;
+  align-items: center;
+  color: grey;
+  height: 40px;
+  cursor: pointer; /* 마우스 */
+  transition: 200ms color ease-in; /* 부드러운 애니메이션*/
+}
+
+.sidebar > hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.siebarOption:hover {
+  color: white;
+}
+
+.sidebarOption__icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.sidebar > p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+}

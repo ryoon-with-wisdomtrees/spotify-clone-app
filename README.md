@@ -27,7 +27,16 @@ Thightly coupled code</br>
 이러한 문제점을 fix하기 위해 많은 사람들이 **react context api**를 사용함.</br>
 </br></br>
 react context api를 사용하면, any point of tree던 directly하게 pull it 할 수 있음.</br>
-extremely crucial한 부분이니까 context api 자세히 잘 들여다 볼 것.(amazone클론 보면 이 부분 좀더 자세히 알 수 있음)
+extremely crucial한 부분이니까 context api 자세히 잘 들여다 볼 것.(amazone클론 보면 이 부분 좀더 자세히 알 수 있음).</br>
+Redux랑 similar concept여서 CONTEXT API가 Data Layer링 어떻게 work하는지 한번 이해해두면 리덕스랑도 same thing할 수 있음.
+
+React Context Api(most friendly and light weighted)로 start하면 이 패턴이 리덕스랑 플럭스와 비슷하기 때문에 무엇부터 dive into하는지 상관없음.</br>
+So, level1이 Concept APi, level2가 Redux.</br>
+
+### `https://mui.com/`
+
+The React UI library you always wanted</br>
+`npm install @mui/manpm install @mui/icons-material npm install @mui/icons-material`
 
 <!--
 Runs the app in the development mode.\
