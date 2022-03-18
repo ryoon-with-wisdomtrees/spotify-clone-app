@@ -11,13 +11,16 @@ const spotify = new SpotifyWebApi();
 // https://account.spotify.com/authorize?client_id=98d19661064040c48f233b593b86965b&redirect_uri=http://localhost:3000/&scope=user-read-currently-playing%20user-read-recently-played%20user-read-playback-state%20user-top-read%20user-modify-playback-state&response_type=token&show_dialog=true
 //dispatch  슛 건 to datalayer
 function App() {
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  //const [token, setToken] = useState(null);
+
+  const [{ token }, dispatch] = useDataLayerValue();
   // state 대신 user라고 씀. 스포티파이에서 가져온 데이터들 담는 거임
 
   //useEffect는 Run code based on a given condition
   // 뭔코드가 있던 항상 코드를 실행함.
   // 이거 왜하냐면 어떤 change든 바로 감지할수있게 설정한 값이 변경되면 바로 이 코드가 실행되게하기 위함.
   useEffect(() => {
+    //set token
     const hash = getTokenFromResponse();
     window.location.hash = "";
     const _token = hash.access_token;
@@ -43,6 +46,13 @@ function App() {
           playlists: playlists,
         });
       });
+
+      spotify.getPlaylist("37wcE0iklI2HKl9vS9T1xf").then((response) =>
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })
+      );
     }
 
     console.log(" token 💚", token);
